@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   CircularProgressbarWithChildren,
   buildStyles,
 } from "react-circular-progressbar";
-import ProfilePhoto from "../../Assets/Profile.svg";
 import Bat from "../../Assets/Bat.svg";
-import Rainbow from "../../Assets/Rainbow.svg";
 import Dude from "../../Assets/Dude.svg";
 import Eminem from "../../Assets/Eminem.svg";
+import ProfilePhoto from "../../Assets/Profile.svg";
+import Rainbow from "../../Assets/Rainbow.svg";
 import { Social, Twitter } from "../../Assets/SvgExports";
 const Profile = () => {
-  const [arr, setArr] = useState([
+  const arr = [
     {
       text: "Art",
       clicked: true,
@@ -39,8 +39,7 @@ const Profile = () => {
       text: "ens",
       clicked: false,
     },
-  ]);
-  // const arr = ["Art", "Utility", "PFP", "Metaverse", "Gaming", "PFP", "ens"];
+  ];
   return (
     <div className="h-[640px] w-[292px] rounded-[16px] px-[18px] pt-[16px] pb-[24px] bg-[#111111] flex flex-col">
       <div className="flex gap-[12px]">
@@ -70,11 +69,13 @@ const Profile = () => {
         </div>
       </div>
       <div className="mt-[32px] p-[0px] gap-[20px] flex justify-start">
-        <div className="h-[32px] w-[126px] gap-[8.36px] rounded-[24px] bg-[#1A1A1A] text-[12px] font-[400] text-[#A2A2A2] flex justify-center items-center">
+        <div className="cursor-pointer h-[32px] w-[126px] gap-[8.36px] rounded-[24px] bg-[#1A1A1A] text-[12px] font-[400] text-[#A2A2A2] flex justify-center items-center">
           <Twitter />
           @dingalingts
         </div>
-        <Social />
+        <div className="cursor-pointer">
+          <Social />
+        </div>
       </div>
       <div className="text-[14px] text-[#A2A2A2] mt-[32px] font-[400]">
         An Investor / Collector of #NFTs and OG enthusiast. Co-Founder and owner
@@ -91,12 +92,19 @@ const Profile = () => {
       </div>
       <div className="flex flex-wrap gap-[8px] mt-[32px]">
         {arr.map((data, index) => (
-          <div className="px-[10px] py-[6px] text-[12px] border-[1px] rounded-[40px]" style={data.clicked?{borderColor:"#FFC148", color:"#FFC148"}:{borderColor:"#1A1A1A",color:"#A2A2A2"}}>
+          <div
+            className="px-[10px] py-[6px] text-[12px] border-[1px] rounded-[40px]"
+            style={
+              data.clicked
+                ? { borderColor: "#FFC148", color: "#FFC148" }
+                : { borderColor: "#1A1A1A", color: "#A2A2A2" }
+            }
+          >
             {data.text} 12%
           </div>
         ))}
       </div>
-      <div className="rounded-[24px] flex justify-center border-[#A2A2A2] border-[1px] px-[37px] py-[12px] text-[#FAFAFA] text-[14px] font-[400] mt-[36px]">
+      <div className="rounded-[24px] flex justify-center border-[#A2A2A2] border-[1px] px-[37px] py-[12px] text-[#FAFAFA] text-[14px] font-[400] mt-[36px] cursor-pointer">
         Subscribe {">>"}
       </div>
     </div>

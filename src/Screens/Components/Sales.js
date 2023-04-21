@@ -13,7 +13,7 @@ const Sales = ({
 }) => {
   return (
     <div className="h-[148px] w-[201px] rounded-[16px] bg-[#111111] p-[10px] relative">
-      <div className={`absolute h-[87px] w-[87px] rounded-br-[100%] top-[0px] left-[10px] blur-xl`} style={{backgroundColor:blurColour}} />
+      <div className={`absolute h-[100px] w-[100px] rounded-br-[100%] top-[0px] left-[0px] blur-xl `} style={{backgroundColor:blurColour}} />
       <div className="grid grid-cols-5 gap-[12px]">
         <div className="col-span-2">
           <img className="h-[52px] w-[52px]" src={icon} alt="" />

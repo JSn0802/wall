@@ -3,7 +3,7 @@ import UpArrow from "../../Assets/Arrow.svg";
 
 const Card = ({ Img, title }) => {
   return (
-    <div className="w-fit rounded-[4px] pt-[4px] pb-[8px] bg-[#111111] px-[4px] relative">
+    <div className="w-fit rounded-[4px] pt-[4px] pb-[8px] bg-[#111111] pl-[8px] relative">
       <div className="h-[22px] w-[69px] rounded-[31px] z-1 bg-[#00000080] absolute top-[171px] right-[8px] py-[1px] px-[6px] text-[#FAFAFA] text-[11px] font-[500]">
         3 months
       </div>
